@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import  './style.css';
+import './Footer.css'
 
 
 
