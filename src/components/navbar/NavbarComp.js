@@ -57,20 +57,7 @@ export default class NavbarComp extends Component {
                     </Navbar>
                 </div>
                 <div>
-                    <Switch>
-                        {/*   <Route path="/clientes"> /*refazer os nomes
-                           <Clientes/>               
-                        </Route>
-                        <Route path="/games">    
-                            <Games />         
-                        </Route>
-                        <Route path="/locações">  
-                            <Locações />    
-                        </Route>
-                        <Route path="/">
-                            <Home />     
-        </Route>   */}
-                    </Switch>
+
 
                 </div>
 

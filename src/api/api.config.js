@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: "depois eu vejo"
+    baseURL: "https://rentagameapi.herokuapp.com/"
 })
 
 export default api
