@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import api from '../api/api.config';
+import Footer from './footer/Footer';
 
 const INITIAL_FORM = {
     username: "",

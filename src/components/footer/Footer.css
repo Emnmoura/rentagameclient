@@ -1,5 +1,5 @@
 .footer {
-    background-color: #14213d;
+    background-color:  #353a40;
     
     display: flex;
     width: 100%;
@@ -7,7 +7,7 @@
     font-weight: bold;
     line-height: 35px;
     
-    position: relative;
+    position: re;
     bottom: 0px;
     height: 60px;
     
