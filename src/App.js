@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 import Signup from './components/Signup';
 import NavbarComp from './components/navbar/NavbarComp';
 import Footer from './components/footer/Footer';
@@ -13,9 +13,10 @@ function App() {
 
       <NavbarComp />
       <Switch>
-        <Route exact path='/signup' component={Signup} />
-        <Route exact path='/' component={Home} />
-
+        <Router>
+          <Route exact path='/signup' component={Signup} />
+          <Route exact path='/' component={Home} />
+          </Router>
       </Switch>
 
 
