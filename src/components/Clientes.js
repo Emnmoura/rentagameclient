@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 
 expect default class Contact extends Component {
     render() {
@@ -8,4 +8,4 @@ expect default class Contact extends Component {
             </div>
         )
     }
-}
+}*/
