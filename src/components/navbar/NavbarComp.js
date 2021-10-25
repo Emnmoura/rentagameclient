@@ -15,9 +15,9 @@ export default class NavbarComp extends Component {
         return (
             <Router>
                 <div>
-                    <Navbar bg="dark" variant={"dark"} expand="lg">
+                    <Navbar bg="secondary" variant={"dark"} expand="lg">
                         <Container fluid>
-                            <Navbar.Brand href="#">RentaAGame</Navbar.Brand>
+                            <Navbar.Brand href="#">RentAGame</Navbar.Brand>
                             <Navbar.Toggle aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
                                 <Nav
@@ -25,23 +25,11 @@ export default class NavbarComp extends Component {
                                     style={{ maxHeight: '100px' }}
                                     navbarScroll
                                 >
-                                    <Nav.Link as={Link} to={"/home"}>Home</Nav.Link>
-                                    <Nav.Link as={Link} to={"/clientes"}>Clientes</Nav.Link>
-                                    <Nav.Link as={Link} to={"/games"}>Games</Nav.Link>
-                                    <Nav.Link as={Link} to={"/locações"}>Locações</Nav.Link>
-                                    <NavDropdown title="Link" id="navbarScrollingDropdown">
-                                        <NavDropdown.Item href="#action3">Clientes</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action4">Games</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action4">Locações</NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#action5">
-                                            Something else here
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
-                                    <Nav.Link href="#" disabled>
-                                        Uso futuro
-
-                                    </Nav.Link>
+                                    <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
+                                    <Nav.Link as={Link} to={"/cliente/all"}>Clientes</Nav.Link>
+                                    <Nav.Link as={Link} to={"/games/all"}>Games</Nav.Link>
+                                    <Nav.Link as={Link} to={"/locacoes/all"}>Locações</Nav.Link>                                   
+                                    
                                 </Nav>
                                 <Form className="d-flex">
                                     <FormControl
@@ -50,7 +38,7 @@ export default class NavbarComp extends Component {
                                         className="me-2"
                                         aria-label="Search"
                                     />
-                                    <Button variant="outline-success">Search</Button>
+                                    <Button variant="outline-light">Procurar</Button>
                                 </Form>
                             </Navbar.Collapse>
                         </Container>

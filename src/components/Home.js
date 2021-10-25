@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from "react-router-dom";
 
 const Home = () => {
   return (
@@ -10,8 +11,8 @@ const Home = () => {
           <img className='img-thumbnail'
           src="https://user-images.githubusercontent.com/84294089/138571399-90f21de9-874e-4ece-ae62-dfd8d3622460.png"
            alt=''/>
-            <a href="https://twitter.com/"><button className='btn btn-secondary m-3'>Nossos Clientes</button></a>
-            <a href="https://twitter.com/"><button className='btn btn-secondary m-3'>Cadastrar Cliente</button></a>                     
+            <Link to='cliente/all'><button className='btn btn-secondary m-3'>Nossos Clientes</button></Link>
+            <Link to='cliente/new'><button className='btn btn-secondary m-3'>Cadastrar Cliente</button></Link>                     
           </div>
         </div>
 
@@ -21,8 +22,8 @@ const Home = () => {
           <img className='img-thumbnail'
           src="https://user-images.githubusercontent.com/84294089/138574387-724515eb-f1b8-4bb0-8f72-05c553f1a9ab.jpg"
            alt=''/>
-            <a href="https://twitter.com/"><button className='btn btn-secondary m-3'>Nossos Jogos</button></a>
-            <a href="https://twitter.com/"><button className='btn btn-secondary m-3'>Cadastrar Jogo</button></a>                         
+            <Link to='jogos/all'><button className='btn btn-secondary m-3'>Nossos Jogos</button></Link>
+            <Link to='jogos/new'><button className='btn btn-secondary m-3'>Cadastrar Jogo</button></Link>                         
           </div>
         </div>
 
@@ -32,8 +33,8 @@ const Home = () => {
           <img className='img-thumbnail h-75'
           src="https://user-images.githubusercontent.com/84294089/138574527-3341ea78-1efd-42bc-9c70-0d98b73a3c07.jpg"
            alt=''/>
-            <a href="https://twitter.com/"><button className='btn btn-secondary m-3'>Locações</button></a>
-            <a href="https://twitter.com/"><button className='btn btn-secondary m-3'>Criar Locação</button></a>                         
+            <Link to='locacoes/all'><button className='btn btn-secondary m-3'>Locações</button></Link>
+            <Link to='locacoes/new'><button className='btn btn-secondary m-3'>Criar Locação</button></Link>                         
           </div>
         </div>
 
