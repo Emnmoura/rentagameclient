@@ -8,7 +8,7 @@ export default class NavbarComp extends Component {
     render() {
         return (
             <div>
-                <Navbar bg="dark" variant={"dark"} expand="lg">
+                <Navbar bg="secondary" variant={"dark"} expand="lg">
                     <Container fluid>
                         <Navbar.Brand href="#">RentaAGame</Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -32,7 +32,7 @@ export default class NavbarComp extends Component {
                                     className="me-2"
                                     aria-label="Search"
                                 />
-                                <Button variant="outline-secondary">Pesquisar</Button>
+                                <Button variant="outline-light">Pesquisar</Button>
                             </Form>
                         </Navbar.Collapse>
                     </Container>
