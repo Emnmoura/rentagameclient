@@ -5,7 +5,7 @@ import NavbarComp from './components/navbar/NavbarComp';
 import Footer from './components/footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home'
-import Clientes from './components/Clientes'
+import ClientesList from './components/clientes/ClientesList'
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/' component={Home} />
-          <Route exact path='/clientes' component={Clientes} />
+          <Route exact path='/clientes' component={ClientesList} />
           
       </Switch>
 
