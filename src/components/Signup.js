@@ -34,8 +34,8 @@ const Signup = () => {
 
                 <label>Senha:</label>
                 <input className='form-control w-25' type="password" name='password' value={formValues.password} onChange={handleChange} />
+                <button className='btn btn-secondary mt-3' >Signup</button>
             </form>
-            <button className='btn btn-dark mt-3' >Signup</button>
         </div>
     );
 }
