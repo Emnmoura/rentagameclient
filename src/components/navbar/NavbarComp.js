@@ -18,10 +18,11 @@ export default class NavbarComp extends Component {
                                 style={{ maxHeight: '100px' }}
                                 navbarScroll
                             >
-                                <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
+                                <Nav.Link as={Link} to={"/main"}>Home</Nav.Link>
                                 <Nav.Link as={Link} to={"/clientes"}>Clientes</Nav.Link>
                                 <Nav.Link as={Link} to={"/games"}>Games</Nav.Link>
                                 <Nav.Link as={Link} to={"/locações"}>Locações</Nav.Link>
+                                <Nav.Link as={Link} to={'/logout'} className="text-light" >Logout</Nav.Link>
                                 
                                 
                             </Nav>
@@ -43,3 +44,4 @@ export default class NavbarComp extends Component {
         )
     }
 }
+
