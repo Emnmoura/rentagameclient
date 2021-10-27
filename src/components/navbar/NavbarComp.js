@@ -22,6 +22,7 @@ export default class NavbarComp extends Component {
                                 <Nav.Link as={Link} to={"/clientes"}>Clientes</Nav.Link>
                                 <Nav.Link as={Link} to={"/games"}>Games</Nav.Link>
                                 <Nav.Link as={Link} to={"/locações"}>Locações</Nav.Link>
+                                <Nav.Link as={Link} to={'/logout'} className="text-light" >Logout</Nav.Link>
                                 
                                 
                             </Nav>
@@ -43,3 +44,4 @@ export default class NavbarComp extends Component {
         )
     }
 }
+

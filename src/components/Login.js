@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from "react-router-dom";
 import api from '../api/api.config';
 import AuthForm from './AuthForm';
 
@@ -26,7 +27,7 @@ const Login = (props) => {
     };
 
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center vh-100">
+        <div className="bg-secondary d-flex flex-column justify-content-center align-items-center vh-100">
             <AuthForm 
                 values={formValues} 
                 handleSubmit={handleSubmit} 
@@ -34,6 +35,7 @@ const Login = (props) => {
                 buttonLabel='Entrar'
                 type="Login"
             />
+            <p className='mt-3'>Cadastre-se <Link className='link-light' to='/signup'>aqui</Link> </p>
         </div>
     );
 }
