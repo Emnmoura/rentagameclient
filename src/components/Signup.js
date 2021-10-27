@@ -9,18 +9,18 @@ const INITIAL_FORM_VALUES = {
     password: "",
 };
 
-const Signup = () => {
+const Signup = (props) => {
     const [formValues, setFormValues] = useState({ ...INITIAL_FORM_VALUES });
     const history = useHistory()
-
+    
     const handleChange = ({ target: { name, value } }) => {
         setFormValues({ ...formValues, [name]: value });
     };
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            await api.post('/signup', formValues)
+            const result = await api.post('/signup', formValues)
             history.push('/login')
         } catch (error) {
             console.error(error)
@@ -28,7 +28,7 @@ const Signup = () => {
     };
 
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center vh-100">
+        <div className="bg-secundary d-flex flex-column justify-content-center align-items-center vh-100">
             <AuthForm 
             values={formValues} 
             handleSubmit={handleSubmit} 

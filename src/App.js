@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
 import ClientesList from './components/clientes/ClientesList';
 import Login from './components/Login';
+import Logout from './components/Logout';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/login' component={Login} />
+          <Route exact path='/logout' component={Logout} />
           <Route exact path='/' component={Home} />
           <Route exact path='/clientes' component={ClientesList} />
           
