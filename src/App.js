@@ -8,6 +8,7 @@ import Home from './components/Home';
 import ClientesList from './components/clientes/ClientesList';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -17,7 +18,7 @@ function App() {
         
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/' component={Home} />
-          <Route exact path='/clientes' component={ClientesList} />
+          <Route exact path='/cliente/all' component={ClientesList} />
           
       </Switch>
 
