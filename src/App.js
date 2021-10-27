@@ -25,7 +25,7 @@ function App() {
           <Route exact path='/main' component={Home} />
           <Route exact path='/clientes' component={ClientesList} />
           <Route exact path='/cliente/new' component={ClienteNovo} />
-          <Route exact path='/cliente/view' component={ClienteView} />
+          <Route exact path='/cliente/:clientId' component={ClienteView} />
           
       </Switch>
       <Footer />
