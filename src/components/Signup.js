@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
+import AuthForm from "../components/AuthForm";
 import api from '../api/api.config';
 import Footer from './footer/Footer';
 
-const INITIAL_FORM = {
+const INITIAL_FORM_VALUES = {
     username: "",
-    password: ""
-}
+    password: "",
+};
 
-const Signup = () => {
-    const [formValues, setFormValues] = useState({ ...INITIAL_FORM });
+const Signup = (props) => {
+    const [formValues, setFormValues] = useState({ ...INITIAL_FORM_VALUES });
     const history = useHistory()
-
+    
     const handleChange = ({ target: { name, value } }) => {
         setFormValues({ ...formValues, [name]: value });
     };
@@ -19,25 +20,23 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            await api.post('/signup', formValues)
+            const result = await api.post('/signup', formValues)
             history.push('/login')
         } catch (error) {
             console.error(error)
         }
-    }
+    };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit} className='d-flex vh-100 flex-column align-items-center justify-content-center'>
-                <label>Usuário:</label>
-                <input className='form-control w-25' type="text" name='username' value={formValues.username} onChange={handleChange} />
-
-                <label>Senha:</label>
-                <input className='form-control w-25' type="password" name='password' value={formValues.password} onChange={handleChange} />
-                <button className='btn btn-secondary mt-3' >Signup</button>
-            </form>
+        <div className="bg-secundary d-flex flex-column justify-content-center align-items-center vh-100">
+            <AuthForm 
+            values={formValues} 
+            handleSubmit={handleSubmit} 
+            handleChange={handleChange}
+            buttonLabel='Cadastrar' 
+            />
         </div>
     );
-}
+};
 
 export default Signup;
