@@ -1,17 +1,17 @@
 import React from "react";
 import { useHistory } from "react-router";
 import { useState, useEffect } from "react";
-import api from "../configs/api";
+import api from "../../api/api.config";
 
 
 const FORM_VALUES = {
-    name: "",
+    nome: "",
     endereco: "",
     telefone: "",
     cpf: "",
 };
 
-const ClienteCad = () => {
+const ClienteNovo = () => {
     const [formValues, setFormValues] = useState({ ...FORM_VALUES })
 
     const history = useHistory()
@@ -20,10 +20,10 @@ const ClienteCad = () => {
         setFormValues({ ...formValues, [name]: value })
     };
 
-    const handleSubmit = async =(e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault()
         try{
-            const result = await api.post('/', formValues)
+            const result = await api.post('/cliente/new', formValues)
             history.push('/')
         } catch (error){
 
@@ -31,48 +31,54 @@ const ClienteCad = () => {
     }
 
     return (
-        <div className='p-5'>
+        <div className='bg-primary d-flex flex-column align-items-center justify-content-center p-5'>
+        <div className='card w-50 m-1'>
+        <h3 className='card-header'>Preencha os campos</h3>
+        <div className="card-body">
             <form onSubmit={handleSubmit}>
             <label > Nome:</label>
-            <imput
+            <input
                 className='form-control'
                 type="text"
-                name='name'
-                value={formValues.name}
+                name='nome'
+                value={formValues.nome}
                 onChange={handleChange}
+            
             />
 
             <label > Endereço:</label>
-            <imput
+            <input
                 className='form-control'
                 type="text"
                 name='endereco'
-                value={formValues.name}
+                value={formValues.endereco}
                 onChange={handleChange}
             />
 
             <label > Telefone:</label>
-            <imput
+            <input
                 className='form-control'
                 type="text"
                 name='telefone'
-                value={formValues.name}
+                value={formValues.telefone}
                 onChange={handleChange}
             />
 
             <label > CPF:</label>
-            <imput
-                className='form-control'
-                type="text"
+            <input
+                className="form-control"
+                type="number"
                 name='cpf'
-                value={formValues.name}
+                value={formValues.cpf}
                 onChange={handleChange}
             />
-
             <button type='submit' className='btn btn-secondary m-3'>Cadastrar</button>
             </form>
         </div>
+        </div>
+        </div>
+
     )
 };
 
-export default ClienteCad;
+export default ClienteNovo;

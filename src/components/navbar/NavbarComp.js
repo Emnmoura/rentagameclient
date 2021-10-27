@@ -10,7 +10,7 @@ export default class NavbarComp extends Component {
             <div>
                 <Navbar bg="secondary" variant={"dark"} expand="lg">
                     <Container fluid>
-                        <Navbar.Brand href="#">RentaAGame</Navbar.Brand>
+                        <Navbar.Brand href="#">RentAGame</Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
