@@ -28,7 +28,7 @@ const Signup = (props) => {
     };
 
     return (
-        <div className="bg-secundary d-flex flex-column justify-content-center align-items-center vh-100">
+        <div className="bg-primary d-flex flex-column justify-content-center align-items-center vh-100">
             <AuthForm 
             values={formValues} 
             handleSubmit={handleSubmit} 

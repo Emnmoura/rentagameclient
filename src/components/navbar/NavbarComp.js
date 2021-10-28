@@ -8,9 +8,9 @@ export default class NavbarComp extends Component {
     render() {
         return (
             <div>
-                <Navbar bg="dark" variant={"dark"} expand="lg">
+                <Navbar bg="secondary" variant={"dark"} expand="lg">
                     <Container fluid>
-                        <Navbar.Brand href="#">RentaAGame</Navbar.Brand>
+                        <Navbar.Brand href="#">RentAGame</Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
@@ -18,7 +18,7 @@ export default class NavbarComp extends Component {
                                 style={{ maxHeight: '100px' }}
                                 navbarScroll
                             >
-                                <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
+                                <Nav.Link as={Link} to={"/main"}>Home</Nav.Link>
                                 <Nav.Link as={Link} to={"/clientes"}>Clientes</Nav.Link>
                                 <Nav.Link as={Link} to={"/games"}>Games</Nav.Link>
                                 <Nav.Link as={Link} to={"/locações"}>Locações</Nav.Link>
@@ -33,7 +33,7 @@ export default class NavbarComp extends Component {
                                     className="me-2"
                                     aria-label="Search"
                                 />
-                                <Button variant="outline-secondary">Pesquisar</Button>
+                                <Button variant="outline-light">Pesquisar</Button>
                             </Form>
                         </Navbar.Collapse>
                     </Container>

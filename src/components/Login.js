@@ -35,7 +35,7 @@ const Login = (props) => {
                 buttonLabel='Entrar'
                 type="Login"
             />
-            <p className='mt-3'>Cadastre-se <Link className='link-light' to='/signup'>aqui</Link> </p>
+            <p className='mt-3'>Cadastre-se <Link className='link-dark' to='/signup'>aqui</Link> </p>
         </div>
     );
 }
