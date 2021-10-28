@@ -22,10 +22,10 @@ const ClienteView = () => {
 
     return(
         <div className=' card bg-primary d-flex flex-column align-items-center justify-content-center p-5'>
-           <h5>{cliente.nome}</h5>
-           <h5>{cliente.endereco}</h5>
-           <h5>{cliente.telefone}</h5>
-           <h5>{cliente.cpf}</h5>
+           <h5>Nome:{cliente.nome}</h5>
+           <h5>Endereço:{cliente.endereco}</h5>
+           <h5>Telefone:{cliente.telefone}</h5>
+           <h5>CPF:{cliente.cpf}</h5>
            <button className='btn btn-dark mt-3'>Editar</button>
         </div>
     )
