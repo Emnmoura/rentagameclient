@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import api from "../../api/api.config";
+import ClientesCard from "./ClientesCard";
 
 
 
@@ -12,18 +14,17 @@ const ClientesList = () => {
 
     const getClientes = async () => {
         try {
-            const result = await api.get("/clientes/all")
-            setClientes({ ...result.data });
-
+            const result = await api.get("/client/all")
+            setClientes({...result.data });
+            console.log(result)
         } catch (error) {
             console.error(error.response);
         }
     };
 
-
     return (
         <div className="p-3 row justify-content-center">
-            {clientes && clientes.map((cliente) => <div>{cliente.nome}</div>)} {/*Clientecard no lugar da div */}
+            {clientes && clientes.map((cliente) => <ClientesCard cliente={cliente}/>)} 
          </div>
     );
 };

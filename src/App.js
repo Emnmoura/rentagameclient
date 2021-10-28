@@ -8,7 +8,7 @@ import Home from './components/Home';
 import ClientesList from './components/clientes/ClientesList';
 import Login from './components/Login';
 import Logout from './components/Logout';
-
+import clienteCard from './components/clientes/ClientesCard';
 
 
 function App() {
@@ -23,6 +23,8 @@ function App() {
           <Route exact path='/logout' component={Logout} />
           <Route exact path='/' component={Home} />
           <Route exact path='/cliente/all' component={ClientesList} />
+         {/* <Route exact path='/clientecard' component={} />*/}
+
           
       </Switch>
 
