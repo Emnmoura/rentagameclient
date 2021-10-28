@@ -1,12 +1,32 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import api from "../../api/api.config";
+import ClientesCard from "./ClientesCard";
 
-export default class Contact extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Clientes</h1>
-            </div>
-        )
-    }
-}
 
+
+const ClientesList = () => {
+    const [clientes, setClientes] = useState([]);
+
+    useEffect(() => {
+        getClientes();
+    }, []);
+
+    const getClientes = async () => {
+        try {
+            const result = await api.get("/client/all")
+            setClientes({...result.data });
+            console.log(result)
+        } catch (error) {
+            console.error(error.response);
+        }
+    };
+
+    return (
+        <div className="p-3 row justify-content-center">
+            {clientes && clientes.map((cliente) => <ClientesCard cliente={cliente}/>)} 
+         </div>
+    );
+};
+
+export default ClientesList;

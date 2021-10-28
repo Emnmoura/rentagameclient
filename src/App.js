@@ -9,6 +9,7 @@ import ClientesList from './components/clientes/ClientesList';
 import ClienteNovo from './components/clientes/ClienteNovo';
 import Login from './components/Login';
 import Logout from './components/Logout';
+import clienteCard from './components/clientes/ClientesCard';
 import ClienteView from './components/clientes/ClienteView';
 
 
@@ -22,6 +23,10 @@ function App() {
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/' component={Login} />
           <Route exact path='/logout' component={Logout} />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/cliente/all' component={ClientesList} />
+         {/* <Route exact path='/clientecard' component={} />*/}
+
           <Route exact path='/main' component={Home} />
           <Route exact path='/clientes' component={ClientesList} />
           <Route exact path='/cliente/new' component={ClienteNovo} />
