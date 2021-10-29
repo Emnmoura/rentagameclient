@@ -32,7 +32,7 @@ function App() {
           <Route exact path='/clientes' component={ClientesList} />
           <Route exact path='/cliente/new' component={ClienteNovo} />
           <Route exact path='/cliente/:clientId' component={ClienteView} />
-          <Route exact path='/game/new' component={NewGame} />
+          <Route exact path='/jogos/new' component={NewGame} />
           
       </Switch>
       <Footer />

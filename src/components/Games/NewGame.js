@@ -23,7 +23,7 @@ const NewGame = () => {
     const handleSubmit = async(e) => {
         e.preventDefault()
         try{
-            const result = await api.post('/game/new', formValues)
+            const result = await api.post('/jogos/new', formValues)
             history.push('/')
         } catch (error){
 
