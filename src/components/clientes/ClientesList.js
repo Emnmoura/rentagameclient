@@ -15,10 +15,10 @@ const ClientesList = () => {
     const getClientes = async () => {
         try {
             const result = await api.get("/client/all")
-            setClientes({...result.data });
-            console.log(result)
+            setClientes([...result.data ]);
+            
         } catch (error) {
-            console.error(error.response);
+
         }
     };
 

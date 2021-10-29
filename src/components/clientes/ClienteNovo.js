@@ -23,7 +23,7 @@ const ClienteNovo = () => {
     const handleSubmit = async(e) => {
         e.preventDefault()
         try{
-            const result = await api.post('/cliente/new', formValues)
+            const result = await api.post('/client/', formValues)
             history.push('/')
         } catch (error){
 

@@ -21,7 +21,7 @@ const Signup = (props) => {
         e.preventDefault()
         try {
             const result = await api.post('/signup', formValues)
-            history.push('/login')
+            history.push('/')
         } catch (error) {
             console.error(error)
         }

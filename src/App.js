@@ -13,19 +13,24 @@ import clienteCard from './components/clientes/ClientesCard';
 import ClienteView from './components/clientes/ClienteView';
 import ViewGame from './components/games/ViewGame';
 import NewGame from './components/games/NewGame';
+import { useState } from 'react';
 
 
 function App() {
+
+  const [user, setUser] = useState()
+
   return (
     <div className="App">
 
-      <NavbarComp />
+      <NavbarComp user={user} />
       <Switch>
         
           <Route exact path='/signup' component={Signup} />
-          <Route exact path='/' component={Login} />
+          <Route exact path='/' render={(props) => <Login {...props} setUser = {setUser}/>} />
           <Route exact path='/logout' component={Logout} />
           {/*<Route exact path='/' component={Home} />*/}
+          
           <Route exact path='/cliente/all' component={ClientesList} />
          {/* <Route exact path='/clientecard' component={} />*/}
 
