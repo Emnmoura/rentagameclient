@@ -11,8 +11,14 @@ import Login from './components/Login';
 import Logout from './components/Logout';
 import clienteCard from './components/clientes/ClientesCard';
 import ClienteView from './components/clientes/ClienteView';
+<<<<<<< HEAD
 import OurGames from './components/Games/OurGames';
 import OurGameCard from './components/Games/OurGamesCard';
+=======
+import ViewGame from './components/games/ViewGame';
+import NewGame from './components/games/NewGame';
+
+>>>>>>> de8d83c1303a72537d43fa2dceffc46a3a0046b5
 
 function App() {
   return (
@@ -24,12 +30,12 @@ function App() {
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/' component={Login} />
           <Route exact path='/logout' component={Logout} />
-          <Route exact path='/' component={Home} />
+          {/*<Route exact path='/' component={Home} />*/}
           <Route exact path='/cliente/all' component={ClientesList} />
           {/*<Route exact path='/cliente' component={} />*/}
 
           <Route exact path='/main' component={Home} />
-          <Route exact path='/clientes' component={ClientesList} />
+          {/*<Route exact path='/clientes' component={ClientesList} />*/}
           <Route exact path='/cliente/new' component={ClienteNovo} />
           <Route exact path='/cliente/:clientId' component={ClienteView} />
 
@@ -37,6 +43,8 @@ function App() {
           {/*<Route exact path='/game/all' component={OurGameCard} >*/}
 
 
+          <Route exact path='/jogo/:id' component={ViewGame} />
+          <Route exact path='/jogos/new' component={NewGame} />
           
       </Switch>
       <Footer />
