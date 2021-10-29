@@ -10,7 +10,7 @@ export default class NavbarComp extends Component {
             <div>
                 <Navbar bg="secondary" variant={"dark"} expand="lg">
                     <Container fluid>
-                        <Navbar.Brand href="#">RentAGame</Navbar.Brand>
+                        <Navbar.Brand >RentAGame</Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
@@ -18,11 +18,13 @@ export default class NavbarComp extends Component {
                                 style={{ maxHeight: '100px' }}
                                 navbarScroll
                             >
+                                {this.props.user && (<>
                                 <Nav.Link as={Link} to={"/main"}>Home</Nav.Link>
                                 <Nav.Link as={Link} to={"/clientes"}>Clientes</Nav.Link>
                                 <Nav.Link as={Link} to={"/games"}>Games</Nav.Link>
                                 <Nav.Link as={Link} to={"/locações"}>Locações</Nav.Link>
                                 <Nav.Link as={Link} to={'/logout'} className="text-light" >Logout</Nav.Link>
+                                 </>)}
                                 
                                 
                             </Nav>
