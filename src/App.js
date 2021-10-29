@@ -11,7 +11,8 @@ import Login from './components/Login';
 import Logout from './components/Logout';
 import clienteCard from './components/clientes/ClientesCard';
 import ClienteView from './components/clientes/ClienteView';
-
+import OurGames from './components/Games/OurGames';
+import OurGameCard from './components/Games/OurGamesCard';
 
 function App() {
   return (
@@ -25,12 +26,17 @@ function App() {
           <Route exact path='/logout' component={Logout} />
           <Route exact path='/' component={Home} />
           <Route exact path='/cliente/all' component={ClientesList} />
-         {/* <Route exact path='/clientecard' component={} />*/}
+          {/*<Route exact path='/cliente' component={} />*/}
 
           <Route exact path='/main' component={Home} />
           <Route exact path='/clientes' component={ClientesList} />
           <Route exact path='/cliente/new' component={ClienteNovo} />
           <Route exact path='/cliente/:clientId' component={ClienteView} />
+
+          <Route exact path='/game' component={OurGames} />
+          {/*<Route exact path='/game/all' component={OurGameCard} >*/}
+
+
           
       </Switch>
       <Footer />
