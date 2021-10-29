@@ -22,12 +22,10 @@ const ViewLocation = () => {
 
     return(
         <div className=' card bg-primary d-flex flex-column align-items-center justify-content-center p-5'>
-           <h5>Cliente:{location.userId}</h5>
-           <h5>Genero:{game.genero}</h5>
-           <h5>Descrição:{game.descricao}</h5>
-           <h5>Preço:{game.preco}</h5>
-           <h5>Quantidade: {game.quantidade}</h5>
-           <button className='btn btn-dark mt-3'>Editar</button>
+           <h5>Cliente:{location.clientId}</h5>
+           <h5>Jogo:{location.jogoId}</h5>
+           
+           
         </div>
     )
 }
