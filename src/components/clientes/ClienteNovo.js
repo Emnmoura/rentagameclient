@@ -24,7 +24,7 @@ const ClienteNovo = () => {
         e.preventDefault()
         try{
             const result = await api.post('/client/', formValues)
-            history.push('/')
+            history.push('/cliente/all')
         } catch (error){
 
         }

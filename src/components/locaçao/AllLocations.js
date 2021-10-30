@@ -23,11 +23,12 @@ const AllLocations = () => {
     return(<>
         {locacao.map (element =>{ 
             return(
-                <div className=' card bg-primary d-flex flex-column align-items-center justify-content-center p-5'>
-            <h5>Cliente:{element.clientId.nome}</h5>
-            <h5>Jogo:{element.jogoId.titulo}</h5>
+                <div className='card w-50 d-flex flex-column justify-content-between'>
+                <div className=' card-body bg-primary d-flex flex-column align-items-center justify-content-center p-5'>
+            {element.clientId && <h5>Cliente:{element.clientId.nome}</h5>}
+            {element.jogoId && <h5>Jogo:{element.jogoId.titulo}</h5>}
             <h5>Data Locação:{element.dateLocation}</h5>     
-            
+            </div>
          </div>)
         }) }
         </>

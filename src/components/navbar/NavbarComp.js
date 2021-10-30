@@ -21,22 +21,14 @@ export default class NavbarComp extends Component {
                                 {this.props.user && (<>
                                 <Nav.Link as={Link} to={"/main"}>Home</Nav.Link>
                                 <Nav.Link as={Link} to={"/cliente/all"}>Clientes</Nav.Link>
-                                <Nav.Link as={Link} to={"/games"}>Games</Nav.Link>
-                                <Nav.Link as={Link} to={"/locações"}>Locações</Nav.Link>
+                                <Nav.Link as={Link} to={"/jogos/all"}>Games</Nav.Link>
+                                <Nav.Link as={Link} to={"/locacoes/all"}>Locações</Nav.Link>
                                 <Nav.Link as={Link} to={'/logout'} className="text-light" >Logout</Nav.Link>
                                  </>)}
                                 
                                 
                             </Nav>
-                            <Form className="d-flex">
-                                <FormControl
-                                    type="search"
-                                    placeholder="Search"
-                                    className="me-2"
-                                    aria-label="Search"
-                                />
-                                <Button variant="outline-light">Pesquisar</Button>
-                            </Form>
+                            
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>

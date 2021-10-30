@@ -3,13 +3,13 @@ import { useParams } from 'react-router'
 import api from '../../api/api.config'
 
 const ClienteView = () => {
-    const {cpf} = useParams()
+    const {clientId} = useParams()
 
     const [cliente, setCliente] = useState({})
 
     const getCliente = async() => {
         try {
-            const result = await api.get(`/cliente/${cpf}`)
+            const result = await api.get(`/client/${clientId}`)
             setCliente(result.data)
         } catch (error) {            
         }
@@ -26,7 +26,7 @@ const ClienteView = () => {
            <h5>Endereço:{cliente.endereco}</h5>
            <h5>Telefone:{cliente.telefone}</h5>
            <h5>CPF:{cliente.cpf}</h5>
-           <button className='btn btn-dark mt-3'>Editar</button>
+           
         </div>
     )
 }
