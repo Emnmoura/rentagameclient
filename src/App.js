@@ -14,6 +14,8 @@ import ClienteView from './components/clientes/ClienteView';
 import ViewGame from './components/games/ViewGame';
 import NewGame from './components/games/NewGame';
 import { useState } from 'react';
+import AllLocations from './components/locaçao/AllLocations';
+
 
 
 function App() {
@@ -40,6 +42,7 @@ function App() {
           <Route exact path='/cliente/:clientId' component={ClienteView} />
           <Route exact path='/jogo/:id' component={ViewGame} />
           <Route exact path='/jogos/new' component={NewGame} />
+          <Route exact path='/locacoes/all' component={AllLocations} />
           
       </Switch>
       <Footer />
