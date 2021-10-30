@@ -18,6 +18,7 @@ import AllLocations from './components/locaçao/AllLocations';
 import NewLocation from './components/locaçao/NewLocation';
 
 
+import OurGames from './components/games/OurGames';
 
 function App() {
 
@@ -35,12 +36,17 @@ function App() {
           {/*<Route exact path='/' component={Home} />*/}
           
           <Route exact path='/cliente/all' component={ClientesList} />
-         {/* <Route exact path='/clientecard' component={} />*/}
+          {/*<Route exact path='/cliente' component={} />*/}
 
           <Route exact path='/main' component={Home} />
           {/*<Route exact path='/clientes' component={ClientesList} />*/}
           <Route exact path='/cliente/new' component={ClienteNovo} />
           <Route exact path='/cliente/:clientId' component={ClienteView} />
+
+          <Route exact path='/jogos/all' component={OurGames} />
+          
+
+
           <Route exact path='/jogo/:id' component={ViewGame} />
           <Route exact path='/jogos/new' component={NewGame} />
           <Route exact path='/locacoes/all' component={AllLocations} />
