@@ -5,9 +5,9 @@ import api from "../../api/api.config";
 const ClientesCard = ({ cliente, getClientes }) => {
     const deletarCliente = async () => {
         try {
-            //await api.delete(`/client/${cliente._id}`)
-            //getClientes()
-            alert("goiaba")
+            await api.delete(`/client/${cliente._id}`)
+            getClientes()
+            
         } catch (error) {
             console.log(error.response)
 
@@ -16,35 +16,35 @@ const ClientesCard = ({ cliente, getClientes }) => {
     }
 
     return (
-        <div key={cliente._id} className="card m-1 col-sm-12 col-md-6 col-lg-4">
+        <div key={cliente._id} className="card  m-1 col-sm-12 col-md-6 col-lg-4">
             <h5 className="card-header">{cliente.nome}</h5>
-            <div className="card-body d-flex flex-column justify-content-between">
+            <div className="card-body">
                 <p className="card-title">{cliente.description}</p>
-                <div>
-                    <img
+                <div className=' d-flex flex-column align-items-center'>
+                    <img 
                         src={
                             cliente.imageUrl ||
-                            "![game r](https://user-images.githubusercontent.com/84110651/139341278-93b130e8-b88c-4b00-afa4-c757384fd63b.JPG)"
+                            "https://user-images.githubusercontent.com/84294089/139517444-118cf5a2-072a-4f38-be73-2a6d0cf46b5f.jpg"
                         }
-                        className="img-thumbnail"
+                        className="img-thumbnail w-50"
                     />
-                    <div className="d-flex align-items-center">
+                    
                         {cliente.userId === localStorage.getItem("userId") && (
                             <Link
                                 className="btn btn-dark w-100 m-1"
                                 to={`/cliente/nome/${cliente._id}`}
                             >
-                                test1
+                                
                             </Link>
                         )}
                         <Link
-                            className="btn btn-dark w-100 m-1"
-                            to={`/clientes/${cliente._id}`}
+                            className="btn btn-dark w-25 m-1"
+                            to={`/cliente/${cliente._id}`}
                         >
-                            test2
+                            Detalhes
                         </Link>
-                        <button className='btn btn-dark mt-3' onClick={deletarCliente} >Deletar </button>
-                    </div>
+                        <button className='btn btn-danger w-25 mt-0 ' onClick={deletarCliente} >Deletar </button>
+                    
                 </div>
             </div>
         </div>

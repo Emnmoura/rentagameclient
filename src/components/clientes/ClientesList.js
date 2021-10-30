@@ -23,7 +23,7 @@ const ClientesList = () => {
     };
 
     return (
-        <div className="p-3 row justify-content-center">
+        <div className="p-3 d-flex row justify-content-center">
             {clientes && clientes.map((cliente) => <ClientesCard cliente={cliente} getClientes={getClientes}/>)} 
          </div>
     );

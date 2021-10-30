@@ -15,7 +15,7 @@ const OurGameCard = ({ game, getGames }) => {
 
     }
     return (
-        <div key={game._id} className="card m-1 col-sm-12 col-md-6 col-lg-4">
+        <div key={game._id} className="card bg-ligth m-1 col-sm-12 col-md-6 col-lg-4">
         <h5 className="card-header">{game.titulo}</h5>
         <div className="card-body d-flex flex-column justify-content-between">
             <p className="card-title">{game.description}</p>
@@ -23,7 +23,7 @@ const OurGameCard = ({ game, getGames }) => {
                 <img
                     src={
                         game.imageUrl ||
-                        "![game r](https://user-images.githubusercontent.com/84110651/139341278-93b130e8-b88c-4b00-afa4-c757384fd63b.JPG)"
+                        "https://user-images.githubusercontent.com/84294089/139518901-a7104004-87cb-48a6-9f29-f39812ed1423.jpg"
                     }
                     className="img-thumbnail"
                 />
@@ -34,7 +34,7 @@ const OurGameCard = ({ game, getGames }) => {
                     >
                         detalhes
                     </Link>
-                    <button className='btn btn-dark mt-3' onClick={deletarJogo} >Deletar </button>
+                    <button className='btn btn-dark mt-0' onClick={deletarJogo} >Deletar </button>
                     
                 </div>
             </div>

@@ -24,7 +24,7 @@ const NewGame = () => {
         e.preventDefault()
         try{
             const result = await api.post('/game/', formValues)
-            history.push('/jogo/all')
+            history.push(`/jogo/${result.data._id}`)
         } catch (error){
 
         }
