@@ -15,6 +15,7 @@ import ViewGame from './components/games/ViewGame';
 import NewGame from './components/games/NewGame';
 import { useState } from 'react';
 import AllLocations from './components/locaçao/AllLocations';
+import NewLocation from './components/locaçao/NewLocation';
 
 
 
@@ -43,6 +44,7 @@ function App() {
           <Route exact path='/jogo/:id' component={ViewGame} />
           <Route exact path='/jogos/new' component={NewGame} />
           <Route exact path='/locacoes/all' component={AllLocations} />
+          <Route exact path='/locacoes/new' component={NewLocation} />
           
       </Switch>
       <Footer />
