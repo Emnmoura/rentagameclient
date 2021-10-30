@@ -16,16 +16,19 @@ const OurGames = () => {
         try {
             const result = await api.get('/game/all')
             console.log(result)
-         setGames([...result.data]);
+            setGames([...result.data]);
         } catch (error) {
             console.error(error.response);
         }
     };
 
     return (
+<>
+        
         <div className="p-3 row justify-content-center">
-        {games && games.map((game) => <OurGamesCard game={game} getGames={getGames}/>)} 
-     </div>
+            {games && games.map((game) => <OurGamesCard game={game} getGames={getGames} />)}
+        </div>
+</>
     );
 };
 
