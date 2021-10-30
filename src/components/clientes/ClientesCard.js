@@ -16,7 +16,7 @@ const ClientesCard = ({ cliente, getClientes }) => {
     }
 
     return (
-        <div key={cliente._id} className="card  m-1 col-sm-12 col-md-6 col-lg-4">
+        <div key={cliente._id} className=" bg-light card  m-1 col-sm-12 col-md-6 col-lg-4">
             <h5 className="card-header">{cliente.nome}</h5>
             <div className="card-body">
                 <p className="card-title">{cliente.description}</p>
