@@ -1,7 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import api from "../../api/api.config";
 
-const OurGameCard = ({ game }) => {
+const OurGameCard = ({ game, getGames }) => {
+    const deletarJogo = async () => {
+        try {
+             await api.delete(`/game/${game._id}`)
+            getGames()
+        } catch (error) {
+            console.log(error.response)
+            
+        }
+
+
+    }
     return (
         <div key={game._id} className="card m-1 col-sm-12 col-md-6 col-lg-4">
         <h5 className="card-header">{game.titulo}</h5>
@@ -16,20 +28,14 @@ const OurGameCard = ({ game }) => {
                     className="img-thumbnail"
                 />
                 <div className="d-flex align-items-center">
-                    {game.userId === localStorage.getItem("userId") && (
-                        <Link
-                            className="btn btn-dark w-100 m-1"
-                            to={`/game/title/${game._id}`}
-                        >
-                            testgame1
-                        </Link>
-                    )}
                     <Link
                         className="btn btn-dark w-100 m-1"
-                        to={`/games/${game._id}`}
+                        to={`/jogo/${game._id}`}
                     >
-                        testgame2
+                        detalhes
                     </Link>
+                    <button className='btn btn-dark mt-3' onClick={deletarJogo} >Deletar </button>
+                    
                 </div>
             </div>
         </div>

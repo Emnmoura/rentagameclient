@@ -14,9 +14,9 @@ const OurGames = () => {
 
     const getGames = async () => {
         try {
-            const result = await api.get('/games')
-            setGames({...result.data });
+            const result = await api.get('/game/all')
             console.log(result)
+         setGames([...result.data]);
         } catch (error) {
             console.error(error.response);
         }
@@ -24,7 +24,7 @@ const OurGames = () => {
 
     return (
         <div className="p-3 row justify-content-center">
-        {games && games.map((game) => <OurGamesCard game={game}/>)} 
+        {games && games.map((game) => <OurGamesCard game={game} getGames={getGames}/>)} 
      </div>
     );
 };

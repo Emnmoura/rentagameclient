@@ -11,15 +11,10 @@ import Login from './components/Login';
 import Logout from './components/Logout';
 import clienteCard from './components/clientes/ClientesCard';
 import ClienteView from './components/clientes/ClienteView';
-<<<<<<< HEAD
-import OurGames from './components/Games/OurGames';
-import OurGameCard from './components/Games/OurGamesCard';
-=======
 import ViewGame from './components/games/ViewGame';
 import NewGame from './components/games/NewGame';
 import { useState } from 'react';
-
->>>>>>> de8d83c1303a72537d43fa2dceffc46a3a0046b5
+import OurGames from './components/games/OurGames';
 
 function App() {
 
@@ -44,8 +39,8 @@ function App() {
           <Route exact path='/cliente/new' component={ClienteNovo} />
           <Route exact path='/cliente/:clientId' component={ClienteView} />
 
-          <Route exact path='/game' component={OurGames} />
-          {/*<Route exact path='/game/all' component={OurGameCard} >*/}
+          <Route exact path='/jogos/all' component={OurGames} />
+          
 
 
           <Route exact path='/jogo/:id' component={ViewGame} />
