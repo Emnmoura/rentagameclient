@@ -15,6 +15,8 @@ const OurGameCard = ({ game, getGames }) => {
 
     }
     return (
+        
+                
         <div key={game._id} className="card bg-ligth m-1 col-sm-12 col-md-6 col-lg-4">
         <h5 className="card-header">{game.titulo}</h5>
         <div className="card-body d-flex flex-column justify-content-between">
@@ -29,12 +31,12 @@ const OurGameCard = ({ game, getGames }) => {
                 />
                 <div className="d-flex align-items-center">
                     <Link
-                        className="btn btn-dark w-100 m-1"
+                        className="btn btn-dark w-50 m-1"
                         to={`/jogo/${game._id}`}
                     >
-                        detalhes
+                        Detalhes
                     </Link>
-                    <button className='btn btn-dark mt-0' onClick={deletarJogo} >Deletar </button>
+                    <button className='btn btn-danger  w-50 mt-0' onClick={deletarJogo} >Deletar </button>
                     
                 </div>
             </div>

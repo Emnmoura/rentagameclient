@@ -25,7 +25,7 @@ const OurGames = () => {
     return (
 <>
         
-        <div className="p-3 row justify-content-center">
+        <div className="p-3 bg-primary row justify-content-center">
             {games && games.map((game) => <OurGamesCard game={game} getGames={getGames} />)}
         </div>
 </>

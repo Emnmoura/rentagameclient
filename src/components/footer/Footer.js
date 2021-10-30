@@ -11,7 +11,7 @@ const Footer = () => {
     return (
 
         <footer className="footer d-flex bg-secondary" >
-            <span className="span" >MÍDIAS SOCIAIS</span>
+            <span className="span" >REPOSITÓRIOS</span>
             <div className=' d-flex align-items-center justify-content-space-between'>
                
 

@@ -30,11 +30,11 @@ const Login = (props) => {
     };
 
     return (<>
-        
+        <div className="bg-secondary d-flex flex-column justify-content-center align-items-center p-4">
       <img className="background-position-center"
  src="https://user-images.githubusercontent.com/84294089/139520041-3be40e60-c20d-4743-9a65-58daaa5baecb.png"/>
 
-        <div className="bg-secondary d-flex flex-column justify-content-center align-items-center p-4">
+        
             <AuthForm 
                 values={formValues} 
                 handleSubmit={handleSubmit} 
