@@ -1,3 +1,12 @@
+GitHub:</br>
+Backend:https://github.com/Emnmoura/Rentagame-Api </br>
+Frontend: https://github.com/Emnmoura/rentagameclient
+
+Heroku:</br>
+Frontend: https://rentagame-client.herokuapp.com/ </br>
+Backend :https://rentagameapi.herokuapp.com
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
